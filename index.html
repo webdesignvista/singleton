@@ -1,0 +1,1077 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+            <link rel="stylesheet" href="assets/color-themes/bootstrap.yti.min.css" >
+        <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <!-- Home page header dynamic assets -->
+<link rel="stylesheet" href="assets/plugins/swiper/css/swiper.min.css">
+
+<style>
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+    .t-img-block {
+        width: 100%;
+        max-width: 90px;
+        height: 100%;
+        max-height: 90px;
+        margin: 0 auto;
+        overflow: hidden;
+        border: 3px solid #eeeeee;
+    }
+
+    .t-text {
+        width: 100%;
+        max-width: 600px;
+    }
+</style>
+
+<style>
+
+
+    .overlay {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background:rgba(0,0,0,0.4);
+        z-index: 1;
+    }
+
+    .carousel-item-inner {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        margin-top: 30vh;
+        margin-bottom: 25vh;
+        padding: 2rem;
+        color: white;
+        z-index: 2;
+        background:rgba(0,0,0,0.5);
+    }
+
+    /* Slider */
+    .slick-slide {
+        margin: 0px 20px;
+    }
+
+    .slick-slide img {
+        width: 100%;
+    }
+
+    .slick-slider
+    {
+        position: relative;
+
+        display: block;
+        box-sizing: border-box;
+
+        -webkit-user-select: none;
+        -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
+
+        -webkit-touch-callout: none;
+        -khtml-user-select: none;
+        -ms-touch-action: pan-y;
+            touch-action: pan-y;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .slick-list
+    {
+        position: relative;
+
+        display: block;
+        overflow: hidden;
+
+        margin: 0;
+        padding: 0;
+    }
+    .slick-list:focus
+    {
+        outline: none;
+    }
+    .slick-list.dragging
+    {
+        cursor: pointer;
+        cursor: hand;
+    }
+
+    .slick-slider .slick-track,
+    .slick-slider .slick-list
+    {
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+            -ms-transform: translate3d(0, 0, 0);
+            -o-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+    }
+
+    .slick-track
+    {
+        position: relative;
+        top: 0;
+        left: 0;
+
+        display: block;
+    }
+    .slick-track:before,
+    .slick-track:after
+    {
+        display: table;
+
+        content: '';
+    }
+    .slick-track:after
+    {
+        clear: both;
+    }
+    .slick-loading .slick-track
+    {
+        visibility: hidden;
+    }
+
+    .slick-slide
+    {
+        display: none;
+        float: left;
+
+        height: 100%;
+        min-height: 1px;
+    }
+    [dir='rtl'] .slick-slide
+    {
+        float: right;
+    }
+    .slick-slide img
+    {
+        display: block;
+    }
+    .slick-slide.slick-loading img
+    {
+        display: none;
+    }
+    .slick-slide.dragging img
+    {
+        pointer-events: none;
+    }
+    .slick-initialized .slick-slide
+    {
+        display: block;
+    }
+    .slick-loading .slick-slide
+    {
+        visibility: hidden;
+    }
+    .slick-vertical .slick-slide
+    {
+        display: block;
+
+        height: auto;
+
+        border: 1px solid transparent;
+    }
+    .slick-arrow.slick-hidden {
+        display: none;
+    }
+
+
+</style>
+
+<link rel="stylesheet" href="assets/plugins/r-counterup/css/style.css">
+<!-- End Home page header dynamic assets -->
+<style>
+
+.navbar {
+min-height: 80px;
+}
+
+.navbar-brand {
+padding: 0 15px;
+height: 80px;
+line-height: 80px;
+}
+
+.navbar-toggle {
+/* (80px - button height 34px) / 2 = 23px */
+margin-top: 23px;
+padding: 9px 10px !important;
+}
+
+@media (min-width: 768px) {
+	.navbar-nav > li > a {
+		/* (80px - line-height of 27px) / 2 = 26.5px */
+		padding-top: 26.5px;
+		padding-bottom: 26.5px;
+		line-height: 27px;
+	}
+}
+
+</style>
+<link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="assets/plugins/font-awesome/css/all.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+<div class="container">    <a class="navbar-brand brand-text fa-32" href="#">Singleton</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="#about">About </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#services">Services </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#team">Team </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#pricing">Pricing</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#testimonials">Testimonials</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#whyus">Why Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#facts">Company Facts</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+            </li>
+                
+        </ul>      
+    </div>
+
+</div> 
+
+</nav>
+
+<div class="w-100 h-100 overflow-hidden py-5" >
+<!-- Swiper -->
+	<div class="hero-swiper-container text-center" style="">
+		<div class="swiper-wrapper">
+							<div class="swiper-slide  overflow-hidden"  
+					style=" background: url('assets/images/cropped/15674142717394.jpg'); background-size: cover;">
+					<div class="carousel-item-inner position-relative">
+						<h1 class="text-light">Incidunt ipsa in rem</h1>
+					</div>	
+				</div>
+										<div class="swiper-slide  overflow-hidden"  
+					style=" background: url('assets/images/cropped/15674143414419.jpg'); background-size: cover;">
+					<div class="carousel-item-inner position-relative">
+						<h1 class="text-light">Maiores ipsum ut</h1>
+					</div>	
+				</div>
+										<div class="swiper-slide  overflow-hidden"  
+					style=" background: url('assets/images/cropped/15674152931138.jpg'); background-size: cover;">
+					<div class="carousel-item-inner position-relative">
+						<h1 class="text-light">Quibusdam molestiae non</h1>
+					</div>	
+				</div>
+								</div>
+		<!-- Add Pagination -->
+		<div class="hero-swiper-pagination"></div>
+	</div>
+</div>
+
+
+<section class='bg-light border-bottom py-4' id="clients">
+	<div class='container overflow-hidden'>
+		<div class="brands-swiper-container position-relative" >
+			<div class="swiper-wrapper">
+									<div class="swiper-slide">
+						<img src="assets/images/brand-logos/logo10.png" alt="" width="150">
+					</div>
+									<div class="swiper-slide">
+						<img src="assets/images/brand-logos/logo11.png" alt="" width="150">
+					</div>
+									<div class="swiper-slide">
+						<img src="assets/images/brand-logos/logo12.png" alt="" width="150">
+					</div>
+									<div class="swiper-slide">
+						<img src="assets/images/brand-logos/logo13.png" alt="" width="150">
+					</div>
+									<div class="swiper-slide">
+						<img src="assets/images/brand-logos/logo14.png" alt="" width="150">
+					</div>
+									<div class="swiper-slide">
+						<img src="assets/images/brand-logos/logo15.png" alt="" width="150">
+					</div>
+									<div class="swiper-slide">
+						<img src="assets/images/brand-logos/logo16.png" alt="" width="150">
+					</div>
+									<div class="swiper-slide">
+						<img src="assets/images/brand-logos/logo17.png" alt="" width="150">
+					</div>
+									<div class="swiper-slide">
+						<img src="assets/images/brand-logos/logo18.png" alt="" width="150">
+					</div>
+							
+			</div>
+			<!-- Add Arrows -->
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
+		</div>
+	</div>
+</section>
+
+
+<!-- ABOUT COMPANY - 1 -->
+
+<div class='container border-bottom bg-sec' id="about">
+	<div class='row'>
+		<div class='col-12 col-md-8'>
+			<h2 class="font-weight-bold">
+				Helping you open windows of opportunities across the globe!
+							</h2>
+			<p>
+				Nobis cupiditate doloribus sint quae quo quis dignissimos officiis magnam dolor eaque voluptas ut vel ut nihil id sint nemo ipsam culpa eligendi reprehenderit illum sit aut aut excepturi			</p>
+			<p>
+				<button class='btn btn-primary'>More Info.</button>
+			</p>
+		</div>
+		<div class='col-12 col-md-4'>
+			<img class="img-fluid border cshadow" src="assets/images/cropped/15674141268789.jpg" alt="">
+		</div>
+	</div>
+</div>
+
+<!-- SERVICES -->
+
+<div class='container bg-sec' id="services">
+	<div class='text-center'>
+		<h2>OUR SERVICES</h2>
+		<span class='d-block text-muted fs-18'>We provide a wide range of services for all types of businesses</span>
+	</div>
+	<div class='row pt-5'>
+				<div class='col-12 col-md-3'>
+			<div class="service-item bg-light cshadow p-4">
+				<i class="material-icons text-primary md-48">cloud_download e2c0</i>
+				<span class='d-block font-weight-bold'>
+					Advertising Solutions				</span>
+				<span class='d-block'>
+					Optio eius autem molestiae qui consequuntur aut ratione nesciunt voluptatum delectus eveniet explicabo reprehenderit vero				</span>
+				<span class='d-block py-3'>
+					<button class="btn btn-primary btn-sm text-light">
+						More Info.
+					</button>
+				</span>
+			</div>
+		</div>
+				<div class='col-12 col-md-3'>
+			<div class="service-item bg-light cshadow p-4">
+				<i class="material-icons text-primary md-48">create_new_folder e2cc</i>
+				<span class='d-block font-weight-bold'>
+					Busines Expansion				</span>
+				<span class='d-block'>
+					Dolorem adipisci facere doloribus ut voluptas est quis possimus debitis aliquid ducimus aut libero et				</span>
+				<span class='d-block py-3'>
+					<button class="btn btn-primary btn-sm text-light">
+						More Info.
+					</button>
+				</span>
+			</div>
+		</div>
+				<div class='col-12 col-md-3'>
+			<div class="service-item bg-light cshadow p-4">
+				<i class="material-icons text-primary md-48">android e859</i>
+				<span class='d-block font-weight-bold'>
+					Database Solutions				</span>
+				<span class='d-block'>
+					Vel ipsam vitae ad architecto rerum ex enim accusantium doloremque voluptas voluptas ut non				</span>
+				<span class='d-block py-3'>
+					<button class="btn btn-primary btn-sm text-light">
+						More Info.
+					</button>
+				</span>
+			</div>
+		</div>
+				<div class='col-12 col-md-3'>
+			<div class="service-item bg-light cshadow p-4">
+				<i class="material-icons text-primary md-48">collections_bookmark e431</i>
+				<span class='d-block font-weight-bold'>
+					Branding Solutions				</span>
+				<span class='d-block'>
+					Tempore in itaque officiis atque deleniti quam omnis ad dolorem exercitationem est				</span>
+				<span class='d-block py-3'>
+					<button class="btn btn-primary btn-sm text-light">
+						More Info.
+					</button>
+				</span>
+			</div>
+		</div>
+			</div>
+</div>
+
+<!-- Why Us --> 
+
+<section class='w-100 bg-light border bg-sec' id="whyus">
+	<div class='container'>
+		<div class='row'>			
+			<div class='col-12 col-md-4'>
+				<img class="w-100 border cshadow" src="assets/images/cropped/15674141338783.jpg" alt="">
+			</div>
+			<div class='col-12 col-md-8'>
+				<h2 class="ont-weight-bold">Accelerated marketing. Big results.
+									</h2>
+				<p>
+					Tempore aut voluptatem nostrum fugiat quia eveniet consequuntur aut odit dolor quia quisquam fugiat sunt consequatur quidem eos debitis vero vel voluptatum rerum est ea magni				</p>
+				<p>
+					<button class='btn btn-primary'>More Info.</button>
+				</p>
+			</div>
+		</div>		
+	</div>
+</section>
+
+
+<!-- PORTFOLIO -->
+<div class='container overflow-hidden text-center bg-sec' id="portfolio">
+	<div class='text-center'>
+		<h2>OUR AWESOME WORK</h2>
+		<span class='d-block text-muted fs-18'>A selection of our top quality works</span>
+	</div>
+	<div class="portfolio-swiper-container pt-5">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide border p-2 bg-light cshadow">
+				<img src='assets/images/screenshots/aavas.png' class="w-100">
+			</div>
+			<div class="swiper-slide border p-2 bg-light cshadow">
+				<img src='assets/images/screenshots/aegis.png' class="w-100">
+			</div>
+			<div class="swiper-slide border p-2 bg-light cshadow">
+				<img src='assets/images/screenshots/agency99.png' class="w-100">
+			</div>
+			<div class="swiper-slide border p-2 bg-light cshadow">
+				<img src='assets/images/screenshots/aeon.png' class="w-100">
+			</div>	
+			<div class="swiper-slide border p-2 bg-light cshadow">
+				<img src='assets/images/screenshots/agency.png' class="w-100">
+			</div>			
+		</div>
+		<!-- Add Pagination -->
+		<div class="portfolio-swiper-pagination"></div>
+  </div>
+</div>
+
+
+<!-- PRICING TABLE -->
+<section class='bg-light border bg-sec' id="pricing">
+	<div class="container">
+		<div class='text-center'>
+			<h2>PRICING TABLE</h2>
+			<span class='d-block text-muted fs-18'>Simple Pricing</span>
+		</div>
+		<div class="card-deck mb-3 text-center pt-5">
+			<div class="card mb-4 cshadow p-4"> 
+				<h4 class="my-0 font-weight-bold text-muted">Basic</h4>    
+				<div class="card-body">
+					            <h1 class="card-title pricing-card-title">
+                <span class="d-block-inline align-top fs-18 text-muted font-weight-bold">$</span>15 <small class="text-muted fs-16"> per month</small>
+            </h1>
+         
+					<ul class="list-unstyled mt-3 mb-4">
+					<li>10 users included</li>
+					<li>2 GB of storage</li>
+					<li>Email support</li>
+					<li>Help center access</li>
+					</ul>
+					<button type="button" class="btn btn-lg  btn-outline-primary">Sign up</button>
+				</div>
+			</div>
+			<div class="card mb-4 cshadow p-4">
+				<h4 class="my-0 font-weight-bold text-muted">Pro</h4>
+				<div class="card-body">
+					            <h1 class="card-title pricing-card-title">
+                <span class="d-block-inline align-top fs-18 text-muted font-weight-bold">$</span>25 <small class="text-muted fs-16"> per month</small>
+            </h1>
+         
+					<ul class="list-unstyled mt-3 mb-4">
+					<li>20 users included</li>
+					<li>10 GB of storage</li>
+					<li>Priority email support</li>
+					<li>Help center access</li>
+					</ul>
+					<button type="button" class="btn btn-lg btn-primary">Get started</button>
+				</div>
+			</div>
+			<div class="card mb-4 cshadow p-4">
+				<h4 class="my-0 font-weight-bold text-muted">Enterprise</h4>
+			<div class="card-body">
+				            <h1 class="card-title pricing-card-title">
+                <span class="d-block-inline align-top fs-18 text-muted font-weight-bold">$</span>65 <small class="text-muted fs-16"> per month</small>
+            </h1>
+         
+				<ul class="list-unstyled mt-3 mb-4">
+				<li>30 users included</li>
+				<li>15 GB of storage</li>
+				<li>Phone and email support</li>
+				<li>Help center access</li>
+				</ul>
+				<button type="button" class="btn btn-lg btn-primary">Contact us</button>
+			</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<!-- COUNTERS -->
+<section class='bg-sec' id="facts">	
+	<div class="container text-center ">
+		<div class='text-center'>
+			<h2>SOME FACTS</h2>
+			<span class='d-block text-muted fs-18'>Some amazing facts about our company!</span>
+		</div>
+		<div class='row pt-5' id='r-counterup'>
+								<div class="col-lg-3">
+						<div class="single-counterup">
+						<span class="counter circle count-num text-info">9975</span>
+						<h4 class="title text-muted p-3 r-counter-fact pb-2 border-bottom border-primary">MEMBERS</h4>
+					</div>
+				</div>
+								<div class="col-lg-3">
+						<div class="single-counterup">
+						<span class="counter circle count-num text-info">12599</span>
+						<h4 class="title text-muted p-3 r-counter-fact pb-2 border-bottom border-primary">DOWNLOADS</h4>
+					</div>
+				</div>
+								<div class="col-lg-3">
+						<div class="single-counterup">
+						<span class="counter circle count-num text-info">590</span>
+						<h4 class="title text-muted p-3 r-counter-fact pb-2 border-bottom border-primary">PROJECTS</h4>
+					</div>
+				</div>
+								<div class="col-lg-3">
+						<div class="single-counterup">
+						<span class="counter circle count-num text-info">1266</span>
+						<h4 class="title text-muted p-3 r-counter-fact pb-2 border-bottom border-primary">CLIENTS</h4>
+					</div>
+				</div>
+						
+		</div>
+	</div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class='bg-light border bg-sec' id="testimonials">
+	<div class='w-100 text-center'>
+		<h2>CLIENT TESTIMONIALS</h2>
+	</div>
+	<!-- Swiper -->
+	<div class="swiper-container bg-light ">
+		<div class="swiper-wrapper pt-5 pb-5">
+							<div class="swiper-slide bg-light ">
+					<div class='testimonial-card'>	
+						<span class='d-block t-img-block rounded-circle cshadow'>
+							<img src="assets/images//model-1.png" alt="" class="w-100">
+						</span>
+						<span class="d-block t-text pt-4">
+							<p>
+								<sup class='d-block-inline pr-2 text-muted'>
+									<i class="fas fa-quote-left"></i>  
+								</sup> Neque odio saepe fuga corporis voluptatem vel quis deserunt voluptas voluptas voluptatem cumque deleniti nemo quas perspiciatis ex minima							</p>
+						</span>	  
+						<span class="d-block text-muted font-weight-bold">
+							Don Keeling						</span>
+						<span class='d-block text-muted'>
+							WELDING MACHINE TENDER						</span>
+					</div>
+				</div>	
+							<div class="swiper-slide bg-light ">
+					<div class='testimonial-card'>	
+						<span class='d-block t-img-block rounded-circle cshadow'>
+							<img src="assets/images/pixabay/model-1.png" alt="" class="w-100">
+						</span>
+						<span class="d-block t-text pt-4">
+							<p>
+								<sup class='d-block-inline pr-2 text-muted'>
+									<i class="fas fa-quote-left"></i>  
+								</sup> Voluptas unde libero delectus tempore nihil commodi voluptatem in ex odio quo suscipit quia id							</p>
+						</span>	  
+						<span class="d-block text-muted font-weight-bold">
+							Daphne Ratke						</span>
+						<span class='d-block text-muted'>
+							CAREER COUNSELOR						</span>
+					</div>
+				</div>	
+							<div class="swiper-slide bg-light ">
+					<div class='testimonial-card'>	
+						<span class='d-block t-img-block rounded-circle cshadow'>
+							<img src="assets/images/pixabay/model-1.png" alt="" class="w-100">
+						</span>
+						<span class="d-block t-text pt-4">
+							<p>
+								<sup class='d-block-inline pr-2 text-muted'>
+									<i class="fas fa-quote-left"></i>  
+								</sup> A id omnis harum aliquid et nesciunt et odit nisi praesentium hic impedit et eos nihil							</p>
+						</span>	  
+						<span class="d-block text-muted font-weight-bold">
+							Raul Kulas						</span>
+						<span class='d-block text-muted'>
+							SOCIOLOGIST						</span>
+					</div>
+				</div>	
+							<div class="swiper-slide bg-light ">
+					<div class='testimonial-card'>	
+						<span class='d-block t-img-block rounded-circle cshadow'>
+							<img src="assets/images/pixabay/model-1.png" alt="" class="w-100">
+						</span>
+						<span class="d-block t-text pt-4">
+							<p>
+								<sup class='d-block-inline pr-2 text-muted'>
+									<i class="fas fa-quote-left"></i>  
+								</sup> Ab adipisci sequi adipisci eos quod aperiam et sit voluptatem qui corrupti labore odit illum ducimus odio							</p>
+						</span>	  
+						<span class="d-block text-muted font-weight-bold">
+							Miss Rosina Schumm I						</span>
+						<span class='d-block text-muted'>
+							PLASTERER OR STUCCO MASON						</span>
+					</div>
+				</div>	
+							<div class="swiper-slide bg-light ">
+					<div class='testimonial-card'>	
+						<span class='d-block t-img-block rounded-circle cshadow'>
+							<img src="assets/images/pixabay/model-1.png" alt="" class="w-100">
+						</span>
+						<span class="d-block t-text pt-4">
+							<p>
+								<sup class='d-block-inline pr-2 text-muted'>
+									<i class="fas fa-quote-left"></i>  
+								</sup> Voluptatem veniam voluptates impedit itaque beatae fuga sint quia assumenda officiis incidunt aut voluptates vero maxime pariatur nesciunt occaecati dolor							</p>
+						</span>	  
+						<span class="d-block text-muted font-weight-bold">
+							Zakary Luettgen						</span>
+						<span class='d-block text-muted'>
+							MACHINERY MAINTENANCE						</span>
+					</div>
+				</div>	
+							<div class="swiper-slide bg-light ">
+					<div class='testimonial-card'>	
+						<span class='d-block t-img-block rounded-circle cshadow'>
+							<img src="assets/images/pixabay/model-1.png" alt="" class="w-100">
+						</span>
+						<span class="d-block t-text pt-4">
+							<p>
+								<sup class='d-block-inline pr-2 text-muted'>
+									<i class="fas fa-quote-left"></i>  
+								</sup> Voluptatibus voluptate repellendus alias blanditiis ut aliquid qui ipsum eum ipsum quidem necessitatibus fugiat inventore doloribus voluptatibus corrupti							</p>
+						</span>	  
+						<span class="d-block text-muted font-weight-bold">
+							Abbey Rolfson						</span>
+						<span class='d-block text-muted'>
+							ENGINEER						</span>
+					</div>
+				</div>	
+				
+		</div>
+		<!-- Add Pagination -->
+		<div class="swiper-pagination pt-5"></div>
+	</div>
+</section>
+
+<!-- TEAM -->
+<section class='bg-sec' id="team">
+	<div class='text-center'>
+		<h2>OUR TEAM</h2>
+		<span class='d-block text-muted fs-18'>Our awesome team members</span>
+	</div>
+	<!-- Swiper -->
+	<div class='container overflow-hidden pt-5 text-center'>
+		<div class="team-swiper-container ">
+			<div class="swiper-wrapper">
+									<div class="swiper-slide">
+						<div class='team-card'>	
+							<span class='d-block team-img-block cshadow'>
+								<img src="assets/images/public-domain/model-1.jpg" alt="" class="w-100">
+							</span>
+							<span class="d-block text-muted font-weight-bold pt-4">
+								Naomie Heaney							</span>
+							<span class='d-block text-muted'>
+								SERVICE STATION ATTENDANT							</span>
+							<span class="d-block t-text pt-4">
+								<p>
+									Blanditiis qui et sapiente impedit distinctio quo ea minima perferendis dicta mollitia suscipit sed qui								</p>
+							</span>	  
+							
+						</div>
+					</div>	
+
+					<div class="swiper-slide">
+						<div class='team-card'>	
+							<span class='d-block team-img-block cshadow'>
+								<img src="assets/images/public-domain/model-2.jpg" alt="" class="w-100">
+							</span>
+							<span class="d-block text-muted font-weight-bold pt-4">
+								Ms. Chloe Nitzsche II							</span>
+							<span class='d-block text-muted'>
+								OIL SERVICE UNIT OPERATOR							</span>
+							<span class="d-block t-text pt-4">
+								<p>
+									Eos rerum rerum sint dolor distinctio assumenda ducimus assumenda est iure est eaque quia nesciunt molestiae minus dolorem asperiores								</p>
+							</span>	  
+							
+						</div>
+					</div>	
+
+					<div class="swiper-slide">
+						<div class='team-card'>	
+							<span class='d-block team-img-block cshadow'>
+								<img src="assets/images/pexels/model-1.jpg" alt="" class="w-100">
+							</span>
+							<span class="d-block text-muted font-weight-bold pt-4">
+								Brooke Braun IV							</span>
+							<span class='d-block text-muted'>
+								TELEPHONE OPERATOR							</span>
+							<span class="d-block t-text pt-4">
+								<p>
+									Ea quos autem deserunt perferendis aut distinctio mollitia et et ullam doloremque libero unde officiis nulla delectus								</p>
+							</span>	  
+							
+						</div>
+					</div>	
+
+					<div class="swiper-slide">
+						<div class='team-card'>	
+							<span class='d-block team-img-block cshadow'>
+								<img src="assets/images/public-domain/model-1.jpg" alt="" class="w-100">
+							</span>
+							<span class="d-block text-muted font-weight-bold pt-4">
+								Grayson Schmeler							</span>
+							<span class='d-block text-muted'>
+								MOVIE DIRECTOR OR THEATRE DIRECTOR							</span>
+							<span class="d-block t-text pt-4">
+								<p>
+									Aut enim ea tempore quidem aut ad non nihil quas a dolorem et aperiam voluptatem								</p>
+							</span>	  
+							
+						</div>
+					</div>	
+
+					
+
+					<div class="swiper-slide">
+						<div class='team-card'>	
+							<span class='d-block team-img-block cshadow'>
+								<img src="assets/images/public-domain/model-1.jpg" alt="" class="w-100">
+							</span>
+							<span class="d-block text-muted font-weight-bold pt-4">
+								Demond Altenwerth							</span>
+							<span class='d-block text-muted'>
+								TRAINING MANAGER OR DEVELOPMENT MANAGER							</span>
+							<span class="d-block t-text pt-4">
+								<p>
+									Et autem mollitia dignissimos non vel quibusdam consequatur et quod quisquam velit voluptatem sed dolores voluptatum								</p>
+							</span>	  
+							
+						</div>
+					</div>	
+					
+			</div>
+			<!-- Add Pagination -->
+			<div class="team-swiper-pagination pt-5"></div>
+		</div>
+	</div>
+</section>
+
+<!-- CONTACT FORM -->
+<section class="bg-light border bg-sec" id="contact">
+
+	<div class='text-center'>
+		<h2>CONTACT FORM</h2>
+		<span class='d-block text-muted fs-18'>Drop us a line. We are open 24/7 !</span>
+	</div>
+
+
+	<div class='container pt-4'>
+		<form action="#" method="post">
+			<div class="custom-form w-50 mx-auto">
+				<div class="form-row">
+					<div class="col-12 col-md-4 p-2">
+						<input type="text" class="form-control" name="your_name" placeholder="Name" required="required">
+					</div>
+					<div class="col-12 col-md-4 p-2">
+						<input type="email" class="form-control" name="your_email" placeholder="Email">
+					</div>
+					<div class="col-12 col-md-4 p-2">
+						<input type="text" class="form-control" name="your_phone" placeholder="Phone">
+					</div>
+				</div>
+				<div class='form-row'>
+					<div class="col p-2">
+						<textarea name="message" id="message"  class="form-control " rows="7" placeholder="Your message..."></textarea>
+					</div>
+				</div>
+				<div class="text-center pt-4">
+					<button class='btn btn-primary btn-md'>Send Message</button>
+				</div>
+			</div>
+		</form>
+	</div>
+
+</section>
+
+
+<!-- SOCICON -->
+<section class="bg-sec">
+	<div class='container'>
+		<span class="d-block w-100 socicon-block text-center text-muted">
+			<h2>SHARE</h2>
+		</span>
+		<span class="d-block w-100 socicon-block text-center">
+			<a href='#' class="a-socicon fa-32 text-info p-2"><i class="fab fa-facebook-f"></i></a>
+			<a href='#' class="a-socicon fa-32 text-info p-2"><i class="fab fa-twitter"></i></a>
+			<a href='#' class="a-socicon fa-32 text-info p-2"><i class="fab fa-linkedin-in"></i></a>
+			<a href='#' class="a-socicon fa-32 text-info p-2"><i class="fab fa-google-plus-g"></i></a>
+		</span>
+	</div>
+</section>
+
+<!-- FOOTER --> 
+<section class="sm-sec bg-dark">
+	<footer class="container">
+		<div class="row">
+			<div class="col-12 col-md-4">
+				<span class="d-block">
+					<a href='#' class="d-block-inline fa-32 text-muted"><i class="fas fa-feather-alt"></i></a>
+					<span class="d-block-inline pl-2 fa-32 text-muted footer-logo-text">Singleton</span>
+				</span>
+				<span class="d-block text-muted">
+					<p>Singleton is a top quality company.
+						Deserunt autem est eum saepe fugiat reprehenderit voluptatem doloremque et debitis neque omnis laudantium ea ipsa suscipit officiis debitis					</p>
+				</span>
+			</div>
+			<div class="col-12 col-md-4">
+				<h5 class="text-muted font-weight-normal">ADDRESS </h5>
+				<ul class="list-unstyled">
+					<li class="text-muted py-2">
+						<i class="fa fa-map-marker pr-2" aria-hidden="true"></i> 
+						5769 Reba Canyon
+Brownchester, ME 88943-8246					</li>
+					<li class="text-muted py-2">
+						<i class="fa fa-phone pr-2" aria-hidden="true"></i> 
+						1-495-837-2905 x76415					</li> 
+					<li class="text-muted py-2">
+						<i class="fa fa-envelope pr-2" aria-hidden="true"></i>
+						janice.morissette@gmail.com					</li>
+				</ul>
+			</div>
+			<div class="col-12 col-md-4">
+				<h5 class="text-muted font-weight-normal">SUBSCRIBE </h5>
+				<ul class="list-unstyled">					
+					<li class="text-muted py-2">
+						Enter your email to subscribe to our newsletter
+					</li> 
+					<li class="text-muted py-2">
+						<input type="text" class="form-control bg-dark border-secondary" name="subscribe-email">
+					</li>
+					<li class="text-muted py-2">
+						<button class="btn btn-primary text-light btn-sm">Submit</button>
+					</li>
+				</ul>
+			</div>
+		</div>	
+		<div class="copyright text-center text-muted">
+			<hr>
+			&copy; copyright - <a href="https://webdesignvista.com/" class="text-muted">Web Design Vista</a>,
+			All Rights Reserved
+		</div>	
+	</footer>
+	
+</section></body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+<!-- Home page footer dynamic assets -->
+
+
+<!-- Swiper JS -->
+<script src="assets/plugins/swiper/js/swiper.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+
+    var swiper1 = new Swiper('.swiper-container', {
+        speed: 1500,
+        spaceBetween: 30,
+        setWrapperSize: true,
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        },
+      
+    });
+
+    var swiper2 = new Swiper('.portfolio-swiper-container', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+            el: '.portfolio-swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            // when window width is <= 320px
+            320: {
+            slidesPerView: 1,
+            spaceBetween: 20
+            },
+            // when window width is <= 480px
+            480: {
+            slidesPerView: 2,
+            spaceBetween: 30
+            },
+            // when window width is <= 640px
+            640: {
+            slidesPerView: 3,
+            spaceBetween: 40
+            }
+        }
+    });
+
+    var swiper3 = new Swiper('.team-swiper-container', {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        pagination: {
+            el: '.team-swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            // when window width is <= 320px
+            320: {
+            slidesPerView: 1,
+            spaceBetween: 20
+            },
+            // when window width is <= 480px
+            480: {
+            slidesPerView: 2,
+            spaceBetween: 30
+            },
+            // when window width is <= 640px
+            640: {
+            slidesPerView: 3,
+            spaceBetween: 40
+            }
+        }
+    });
+
+    var swiper4 = new Swiper('.brands-swiper-container', {
+        autoHeight: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        slidesPerView: 4,
+        spaceBetween: 30,
+        breakpoints: {
+            // when window width is <= 320px
+            320: {
+            slidesPerView: 1,
+            spaceBetween: 20
+            },
+            // when window width is <= 480px
+            480: {
+            slidesPerView: 2,
+            spaceBetween: 30
+            },
+            // when window width is <= 640px
+            640: {
+            slidesPerView: 3,
+            spaceBetween: 40
+            }
+        }
+    });
+
+
+    var swiper5 = new Swiper('.hero-swiper-container', {
+      pagination: {
+        el: '.hero-swiper-pagination',
+        clickable: true
+      },
+    });
+
+
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
+<script src="assets/plugins/counterup/jquery.counterup.js"></script>
+<script>
+    jQuery(document).ready(function($) {
+            $('.counter').counterUp({
+                delay: 10,
+                time: 1000
+            });
+        });
+</script>
+
+<script>
+    $(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+
+</html>

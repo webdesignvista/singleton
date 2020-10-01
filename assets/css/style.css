@@ -1,0 +1,63 @@
+/* Copyright: https://webdesignvista.com/ */
+.cshadow {
+    -webkit-box-shadow: 0px 6px 14px -10px rgba(0,0,0,0.99); 
+    box-shadow: 0px 6px 14px -10px rgba(0,0,0,0.99);
+}
+
+.grad {
+    background: rgba(255,255,255,1);
+    background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(246,246,246,1)), color-stop(100%, rgba(237,237,237,1)));
+    background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+    background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+    background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=1 );
+}
+
+.md-48 {
+    font-size: 48px !important;
+}
+
+.fa-32 {
+    font-size: 32px !important;
+}
+
+.fa-48 {
+    font-size: 48px !important;
+}
+
+.fs-16 {
+    font-size: 16px !important;
+}
+
+.fs-18 {
+    font-size: 18px !important;
+}
+
+.a-socicon:hover {
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+
+.bg-sec {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+.sm-sec {
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+}
+
+.brand-text {
+    font-family: 'Great Vibes', cursive !important;
+}
+
+.footer-logo-text {
+    font-family: 'Great Vibes', cursive;
+}
+
+.counter {
+    font-size: -webkit-xxx-large;
+}
